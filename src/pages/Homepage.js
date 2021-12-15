@@ -41,7 +41,10 @@ const Homepage = () => {
       </div>
       <div>
         {pizzaList.map((p) => (
-          <div key={p.id}>
+          <div
+            key={p.id}
+            style={{ padding: 30, border: "2px solid white", margin: 20 }}
+          >
             <img src={p.image} alt={p.name} />
             <h3>{p.name}</h3>
             <p>{p.description}</p>

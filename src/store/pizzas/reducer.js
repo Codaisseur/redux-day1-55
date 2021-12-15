@@ -8,7 +8,7 @@ const initialState = {
         "The typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt and extra-virgin olive oil.",
       bought: 5,
       image:
-        "https://imgp2.schaer.com/sites/default/files/styles/header/public/2017-09/HeaderProducts_Pizza%20Margherita.jpg?itok=Fz-7_a56",
+        "https://www.dolcevia.com/nl/images/2019/Culinair/Recepten/Pizza_Margherita_uit_Napels.jpg",
     },
     {
       id: 67283,
