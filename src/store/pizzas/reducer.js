@@ -1,6 +1,6 @@
 // src/store/pizzas/reducer.js
 const initialState = {
-  allPizzas: [
+  list: [
     {
       id: 161235,
       name: "Pizza Margherita",
@@ -29,10 +29,28 @@ const initialState = {
         "https://img.static-rmg.be/a/food/image/q100/w480/h360/1087722/pizza-bianca-met-artisjok-en-mortadella.jpg",
     },
   ],
+  selected: null,
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
+    case "pizzas/ADD": {
+      // name, description => payload
+      const { name, description } = action.payload;
+
+      const newPizza = {
+        name,
+        description,
+        image: "...",
+        id: state.list.length,
+        bought: 0,
+      };
+
+      return {
+        ...state, // list: [{}, {}], selected: null
+        list: [newPizza, ...state.list], // redefine list
+      };
+    }
     default: {
       return state;
     }
